@@ -22,7 +22,7 @@ RUN apk update && \
 	apk add glibc-2.33-r0.apk && \ # needed for toolbox to work. bug: https://github.com/containers/toolbox/issues/772
 	touch /etc/machine-id && \ # needed by toolbox
 	rm -r /media && \ # alpine /media layout confuses toolbox. the directory is recreated on container creation
-	cp /etc/os-release /usr/lib/os-release && \# alpine does not include /ustr/lib/os-release by default
+	cp /etc/os-release /usr/lib/os-release && \ # alpine does not include /ustr/lib/os-release by default
 	apk cache --purge #cleanup
 
 CMD /bin/sh
