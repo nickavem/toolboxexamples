@@ -1,0 +1,42 @@
+#!/bin/sh
+apk add \
+	bash \
+	bash-completion \
+	bzip2 \
+	diffutils \
+	findutils \
+	flatpak \
+	git \
+	gnupg \
+	gvfs \
+	iputils \
+	jwhois \
+	keyutils \
+	krb5 \
+	krb5-libs \
+	less \
+	libcap \
+	lsof \
+	man-db \
+	man-pages \
+	mtr \
+	ncurses-terminfo \
+	neofetch \
+	nss \
+	openssh-client \
+	pigz \
+	procps \
+	rsync \
+	shadow \
+	sudo \
+	tcpdump \
+	tree \
+	tzdata \
+	unzip \
+	vim \
+	wget \
+	which \
+	xauth \
+	xz \
+	zip
+
