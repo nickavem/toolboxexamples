@@ -8,12 +8,12 @@ LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox command" \
       summary="Base image for creating Fedora toolbox containers"
 
-ENV DEBIAN_FRONTEND=noninteractive # skips interactive prompts like timezone and krb5 config
+ENV DEBIAN_FRONTEND=noninteractive
 COPY extra-packages /
 RUN apt-get update && \
 	apt-get upgrade -y && \ 
-	yes | unminimize && \ # "unminimizes" the image. brings back docs missing docs and a few other things
-	apt-get -y install $(cat extra-packages | xargs) && \ # install extra packages
+	yes | unminimize && \
+	apt-get -y install $(cat extra-packages | xargs) && \
 	rm /extra-packages && \ 
 	apt-get clean
 
