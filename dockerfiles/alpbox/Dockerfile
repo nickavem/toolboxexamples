@@ -44,7 +44,7 @@ RUN rm -r /media
 
 # Alpine does not contain /usr/lib/os-release by default. Not required, but will
 # print a warning otherwise.
-RUN cp /etc/os-release /usr/lib/os-release
+RUN ln -fs /etc/os-release /usr/lib/os-release
 
 # Full `ncurses-terminfo` package is needed, otherwise toolbox will print a warning.
 RUN apk add ncurses-terminfo
