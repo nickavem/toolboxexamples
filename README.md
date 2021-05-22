@@ -3,7 +3,7 @@ A few short examples of using [toolbox](https://github.com/containers/toolbox) c
 
 ## Basic usage:
 
-*These images are highly unofficial and not very well tested.*
+*These images are highly unofficial and not very well tested. Feel free to open an issue if you run into any.*
 
 To create the image, simple cd into the appropriate directory and build!
 
