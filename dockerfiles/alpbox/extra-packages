@@ -1,43 +1,34 @@
-#!/bin/sh
-apk add \
-	bash \
-	bash-completion \
-	bzip2 \
-	diffutils \
-	findutils \
-	flatpak \
-	git \
-	gnupg \
-	gvfs \
-	iputils \
-	jwhois \
-	keyutils \
-	krb5 \
-	krb5-libs \
-	less \
-	libcap \
-	lsof \
-	man-db \
-	man-pages \
-	mtr \
-	ncurses-terminfo \
-	neofetch \
-	nss \
-	openssh-client \
-	pigz \
-	procps \
-	rsync \
-	shadow \
-	sudo \
-	tcpdump \
-	tree \
-	tzdata \
-	unzip \
-	vim \
-	wget \
-	which \
-	xauth \
-	xz \
-	dpaste \
-	zip
-
+bash-completion
+bzip2
+diffutils
+findutils
+flatpak
+dpaste
+git
+gnupg
+gnupg
+gvfs
+iputils
+jwhois
+keyutils
+krb5-libs
+less
+lsof
+man-pages
+mtr
+nano
+nss
+openssh-client
+shadow
+pigz
+procps
+rsync
+sudo
+tcpdump
+tree
+unzip
+wget
+which
+xauth
+xz
+zip
