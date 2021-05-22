@@ -13,16 +13,15 @@ COPY extra-packages /
 RUN apk update && \
 	apk upgrade && \
 	chmod +x extra-packages && \
-	./extra-packages && \ )
+	./extra-packages && \
         rm /extra-packages && \
 	mkdir -p /etc/sudoers.d && \
-	echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-toolbox && \ 
+	echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-toolbox && \
 	wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
 	wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.33-r0/glibc-2.33-r0.apk && \
-	apk add glibc-2.33-r0.apk && \ 
-	touch /etc/machine-id && \ 
-	rm -r /media && \ 
+	apk add glibc-2.33-r0.apk && \
+	touch /etc/machine-id && \
+	rm -r /media && \
 	cp /etc/os-release /usr/lib/os-release && \
-	apk cache --purge 
-
+	echo "alias fpaste='dpaste'" > /etc/bashrc
 CMD /bin/sh

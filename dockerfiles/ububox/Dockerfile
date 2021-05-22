@@ -15,6 +15,7 @@ RUN apt-get update && \
 	yes | unminimize && \
 	apt-get -y install $(cat extra-packages | xargs) && \
 	rm /extra-packages && \ 
-	apt-get clean
+	apt-get clean && \
+	echo "alias fpaste='pastebinit'" > /etc/bashrc
 
 CMD /bin/sh

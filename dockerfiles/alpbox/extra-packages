@@ -38,5 +38,6 @@ apk add \
 	which \
 	xauth \
 	xz \
+	dpaste \
 	zip
 
