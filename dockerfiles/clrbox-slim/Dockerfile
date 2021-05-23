@@ -32,4 +32,3 @@ RUN ln /usr/share/defaults/etc/group /etc/group
 
 # Clean
 RUN swupd clean
-
