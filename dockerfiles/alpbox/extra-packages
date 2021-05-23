@@ -2,11 +2,8 @@ bash-completion
 bzip2
 diffutils
 findutils
-flatpak
-dpaste
 git
 gnupg
-gvfs
 iputils
 jwhois
 keyutils
@@ -16,12 +13,11 @@ lsof
 man-pages
 mtr
 nano
-nss
 openssh-client
-shadow
 pigz
 procps
 rsync
+shadow
 sudo
 tcpdump
 tree

@@ -39,7 +39,7 @@ USER maker
 RUN cd paru-bin && \
 	makepkg -sicr --noconfirm
 
-# Install extra-packages including some from the AUR to increase parity with upstream fedora image
+# Install extra-packages
 COPY extra-packages /
 RUN paru -Syu --noconfirm $(cat extra-packages | xargs)
 # Cleanup

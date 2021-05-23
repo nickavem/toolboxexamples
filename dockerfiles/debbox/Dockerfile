@@ -28,5 +28,6 @@ RUN apt-get clean
 RUN mkdir -p /etc/sudoers.d
 RUN sed -i "s/nullok_secure/nullok/" /etc/pam.d/common-auth
 RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/10-toolbox
+RUN apt-get install libnss-myhostname
 
 CMD /bin/sh
