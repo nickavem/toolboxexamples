@@ -25,8 +25,6 @@ USER maker
 RUN cd paru-bin && \
 	makepkg -sicr --noconfirm
 
-# Install extra-packages
-RUN paru -Sy --noconfirm sudo
 # Cleanup
 RUN paru -Scc --noconfirm
 
