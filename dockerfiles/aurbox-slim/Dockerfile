@@ -11,22 +11,9 @@ LABEL com.github.containers.toolbox="true" \
       summary="Base image for creating Fedora toolbox containers" \
       maintainer="Andrew Thurman <ajtbecool@gmail.com>"
 
-# Tell pacman to install documentation
-RUN sed -i '92,100d' /etc/pacman.conf
-
-# Inititalize repos and upgrade.
-# The other images are not uphraded by default, however due to pacman's nature it
-# makes the most sense to do it here.
-RUN pacman -Syu --noconfirm
-
-# Install documentation not included in the default image
-COPY missing-docs /
-RUN pacman -Syu --noconfirm $(<missing-docs)
-RUN rm /missing-docs
-
 # Install the AUR helper paru: https://github.com/Morganamilo/paru
 # If you do not wish to use the AUR modify as necesarry.
-RUN pacman -Syu git --noconfirm
+RUN pacman -Sy git --noconfirm
 RUN git clone https://aur.archlinux.org/paru-bin.git
 RUN chmod a+w /paru-bin
 # Paru can only be built as a regular user with sudo access
@@ -39,8 +26,7 @@ RUN cd paru-bin && \
 	makepkg -sicr --noconfirm
 
 # Install extra-packages
-COPY extra-packages /
-RUN paru -Syu --noconfirm $(cat extra-packages | xargs)
+RUN paru -Sy --noconfirm sudo
 # Cleanup
 RUN paru -Scc --noconfirm
 

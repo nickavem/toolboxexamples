@@ -1,5 +1,6 @@
 # Learn more about alpine Linux here: https://alpinelinux.org/
-FROM docker.io/library/alpine
+# This is a "slim" image and may require the installation of extra packages
+FROM docker.io/library/alpine:latest
 
 ENV NAME=alpine-toolbox VERSION=latest
 LABEL com.github.containers.toolbox="true" \
@@ -10,14 +11,8 @@ LABEL com.github.containers.toolbox="true" \
       summary="Base image for creating Alpine toolbox containers" \
       maintainer="Andrew Thurman <ajtbecool@gmail.com>"
 
-# Pull in missing documentation
-RUN apk add docs
-
-# Add extra packages for a working environment. The `extra-packages` file is based
-# off the upstream as closely as possible with some minor tweaking for distro support.
-COPY extra-packages /
-RUN apk add $(cat extra-packages | xargs)
-RUN rm /extra-packages
+# Add extra packages for a working enviroment: https://github.com/containers/toolbox#image-requirements
+RUN apk add shadow sudo bash libcap
 
 # These commands will help the image better integrate with the toolbox upstream:
 # https://github.com/containers/toolbox#image-requirements

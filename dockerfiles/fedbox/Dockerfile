@@ -1,5 +1,5 @@
 # Learn more about Fedora at: https://getfedora.org/
-FROM registry.fedoraproject.org/fedora:34
+FROM registry.fedoraproject.org/fedora
 
 ENV NAME=fedora-toolbox VERSION=34
 LABEL com.github.containers.toolbox="true" \
