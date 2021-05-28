@@ -32,14 +32,17 @@ toolbox enter alpbox
 ## FAQ
 
 **Will you try to implement these images upstream?**
+
 No. There is still a lot of work to be done on the upstream toolbox regarding
 multi-distro support before this will even be probable.
 
 **Will you publish these images to a registry (i.e., Docker hub)?**
+
 Perhaps eventually, however currently I would still consider them too volatile to 
 be “production ready”. I also ask that nobody publish them independently without
 my permission, even if only for personal use.
 
 **What are the supported architectures?**
+
 Currently, only x86_64 is explicitly supported, however I am not against adding 
 fixes to support other architectures.
