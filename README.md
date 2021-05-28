@@ -1,6 +1,10 @@
 # toolboxexamples
 A few short examples of using [toolbox](https://github.com/containers/toolbox) containers to their fullest potential.
 
+The past few days I have been playing around with using other Linux distributions in toolbox. It’s something I think of every once in a while. *Darn I’d really like a package from the AUR* or *Debian’s libraries would be useful right now.* Fedora is close to perfect, but I am sometimes missing little things. In the past, I have used vanilla podman for things like that, but that can be complex, especially for doing rudimentary testing. So, I did some research, did some playing around, and got a few other OSes working in toolbox.
+
+It’s nothing groundbreaking, and I’m sure it has been done better elsewhere, but if anyone has been interested and would like help and/or would like to help me, feel free to take a look.
+
 ## Basic usage:
 
 *These images are highly unofficial and not very well tested. Feel free to open an issue if you run into any.*
