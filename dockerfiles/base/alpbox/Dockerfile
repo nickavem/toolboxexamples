@@ -40,7 +40,7 @@ RUN rm -r /media
 # print a warning otherwise.
 RUN ln -fs /etc/os-release /usr/lib/os-release
 
-# Full `ncurses-terminfo` package is needed, otherwise toolbox will print a warning.
+# Full `ncurses-terminfo` package is not needed, otherwise toolbox will print a warning.
 RUN apk add ncurses-terminfo
 
 CMD /bin/sh
