@@ -10,7 +10,7 @@ LABEL com.github.containers.toolbox="true" \
       maintainer="Andrew Thurman <ajtbecool@gmail.com>"
 
 # Install extra packages
-RUN xbps-install -Sy sudo shadow util-linux bash libcap-progs ncurses-base
+RUN xbps-install -Sy sudo shadow util-linux bash libcap-progs
 
 # These commands will help the image better integrate with the toolbox upstream:
 # https://github.com/containers/toolbox#image-requirements
