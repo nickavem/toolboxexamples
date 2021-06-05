@@ -11,9 +11,12 @@ LABEL com.github.containers.toolbox="true" \
       summary="Base image for creating Fedora toolbox containers" \
       maintainer="Andrew Thurman <ajtbecool@gmail.com>"
 
+# Add extra packages for a working enviroment: https://github.com/containers/toolbox#image-requirements
+RUN pacman -Sy libcap mlocate --noconfirm
+
 # Install the AUR helper paru: https://github.com/Morganamilo/paru
 # If you do not wish to use the AUR modify as necesarry.
-RUN pacman -Sy git mlocate --noconfirm
+RUN pacman -Sy git --noconfirm
 RUN git clone https://aur.archlinux.org/paru-bin.git
 RUN chmod a+w /paru-bin
 # Paru can only be built as a regular user with sudo access
