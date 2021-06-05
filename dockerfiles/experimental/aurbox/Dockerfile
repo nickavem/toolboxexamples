@@ -11,8 +11,8 @@ LABEL com.github.containers.toolbox="true" \
       summary="Base image for creating Fedora toolbox containers" \
       maintainer="Andrew Thurman <ajtbecool@gmail.com>"
 
-# Add extra packages for a working enviroment: https://github.com/containers/toolbox#image-requirements
-RUN pacman -Sy libcap mlocate --noconfirm
+# Even though it isn't optimal archlinux just breaks without an upgrade
+RUN pacman -Syu --noconfirm
 
 # Install the AUR helper paru: https://github.com/Morganamilo/paru
 # If you do not wish to use the AUR modify as necesarry.

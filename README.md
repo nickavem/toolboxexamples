@@ -15,7 +15,7 @@ To create the image, simple CD into the appropriate directory and build!
 git clone https://github.com/nickavem/toolboxexamples.git
 cd toolboxexamples
 cd dockerfiles/base/alpbox
-podman build -t alpbox .
+podman build --pull-always -t alpbox .
 ```
 
 This will create an image automatically hosted locally on your system. To create a toolbox container using it, simply run:
