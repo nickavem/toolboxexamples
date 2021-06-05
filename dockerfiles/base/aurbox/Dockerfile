@@ -13,7 +13,7 @@ LABEL com.github.containers.toolbox="true" \
 
 # Install the AUR helper paru: https://github.com/Morganamilo/paru
 # If you do not wish to use the AUR modify as necesarry.
-RUN pacman -Sy git --noconfirm
+RUN pacman -Sy git mlocate --noconfirm
 RUN git clone https://aur.archlinux.org/paru-bin.git
 RUN chmod a+w /paru-bin
 # Paru can only be built as a regular user with sudo access
